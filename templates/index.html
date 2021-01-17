@@ -1,0 +1,23 @@
+<html lang="ru">
+	<head>
+		<title>HomePage</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	</head>
+	<body>
+		<h2>Welcome to Glossary</h2>
+		<hr>
+		<p>methods:</p>
+		<p>[GET]: http://127.0.0.1:8080/all</p>
+		<p>[POST]: http://127.0.0.1:8080/add</p>
+		<p>example add (json): {"def": "определение", "head": "test", "headru": "тест"}</p>
+		<p>[GET]: http://127.0.0.1:8080/info/test</p>
+		<p>where `test` it's a head from example</p>
+		<p>[GET]: http://127.0.0.1:8080/del/test</p>
+		<p>where `test` it's a head from example</p>
+		<hr>
+		<p>MindMap:</p>
+		<form action="" method="post" novalidate>
+			===> {{ form.submit() }}
+		</form>
+	</body>
+</html>

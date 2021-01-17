@@ -1,0 +1,16 @@
+<html lang="ru">
+	<head>
+		<title>MindMap</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	</head>
+	<body>
+		<div><a href="/index">HomePage</a></div>
+		<hr>
+		<img src="{{ url_for('static', filename='mind_map.png') }}" alt="MindMap">
+		<br>
+		<p>Глоссарий:</p>
+		{% for data in all_data %}
+		<p>[{{data.head}}] <b> {{data.headru}} - </b>{{data.def}}</p>
+		{% endfor %}
+	</body>
+</html>
